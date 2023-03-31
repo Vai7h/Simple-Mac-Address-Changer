@@ -18,10 +18,9 @@ lists on servers or routers. Another advantage of this is that it can allow user
 For more information use:- 
 ```
 python mac_changer.py
-
 ```
+
 fire up the script:- 
 ```
 python mac_changer.py --i <desired interface> --mac <new mac address>
 ```
-By Vai7h
