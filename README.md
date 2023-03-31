@@ -17,7 +17,7 @@ lists on servers or routers. Another advantage of this is that it can allow user
 
 For more information use:- 
 ```
-python mac_changer.py
+python mac_changer.py --help
 ```
 
 fire up the script:- 
