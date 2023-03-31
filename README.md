@@ -1,8 +1,7 @@
 # Simple-Mac-Address-Changer
 
-### **Made for Linux distributions.**
-
-### **Compatible with both python2 and python3.**
+### *Made for Linux distributions.*
+### *Compatible with both python2 and python3.*
 
 **About** 
 
@@ -16,10 +15,13 @@ lists on servers or routers. Another advantage of this is that it can allow user
 
 **Usage**
 
-## For more information use:- 
+For more information use:- 
+```
 python mac_changer.py
 
-## fire up the script:- 
+```
+fire up the script:- 
+```
 python mac_changer.py --i <desired interface> --mac <new mac address>
-
+```
 By Vai7h
