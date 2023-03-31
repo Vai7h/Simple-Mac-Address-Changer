@@ -22,14 +22,17 @@ python mac_changer.py --help
 ```
 
 Fire up the script:- 
-Example:- 
-```
-python mac_changer.py --i eth0 --mac 70:56:51:BE:B3:00
-```
 
 Syntax:- 
 ```
 python mac_changer.py --i <desired interface> --mac <new mac address>
 ```
+
+Example:- 
+```
+python mac_changer.py --i eth0 --mac 70:56:51:BE:B3:00
+```
+
+
 
 
