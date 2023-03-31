@@ -4,7 +4,7 @@ import subprocess
 from optparse import OptionParser
 import re
 
-
+# Function to get user inputs
 def get_inputs():
     parser = OptionParser()
     parser.add_option("--i", "--interface", dest="interface", help="add your mac address")
@@ -19,7 +19,7 @@ def get_inputs():
     # or we can us return function this way!
     # change_mac(options.interface, options.new_mac)
 
-
+# function to change the mac address
 def change_mac(interface, new_mac):
     # subprocess.call("ifconfig", shell=True)
     print("[+] Changing the " + interface + " to the mac address " + new_mac)
@@ -27,7 +27,7 @@ def change_mac(interface, new_mac):
     subprocess.call(["ifconfig", interface, "hw", "ether", new_mac])
     subprocess.call(["ifconfig", interface, "up"])
 
-
+# funnction to return value stored in ether that is the mac address, using regex
 def current_mac(interface):
     result_mac = subprocess.check_output(['ifconfig', interface])
     # print(result_mac)
@@ -41,12 +41,11 @@ def current_mac(interface):
 
 # options= get_inputs()
 
-options = get_inputs()  # function to get user inputs and stored in options variable , options holds value of mac as
-# well as interface
-returned_mac = current_mac(options.interface)
+options = get_inputs()  # function to get user inputs and stored in options variable , options holds value of mac as well as interface
+returned_mac = current_mac(options.interface) # retured_mac has the current mac address value
 print("Current Mac = " + str(returned_mac))
 change_mac(options.interface, options.new_mac)
-returned_mac = current_mac(options.interface)  # new_mac is overwritten in this variable
+returned_mac = current_mac(options.interface)  # returned_mac is overwritten with new mac address from user
 if options.new_mac == returned_mac:
     print("[+] Mac changed successfully to " + options.new_mac)
 else:
